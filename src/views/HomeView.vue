@@ -102,7 +102,7 @@ const navigateToMaps = () => {
           </div>
           <div class="col-md-6">
             <img
-              src="https://via.placeholder.com/600x400"
+              src="https://retinalscreenings.com/wp-content/uploads/2022/02/AdobeStock_317687329-2048x1024.jpeg"
               alt="Health dashboard illustration"
               class="img-fluid rounded shadow"
             />
