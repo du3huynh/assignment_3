@@ -1,35 +1,129 @@
-@import './base.css';
+/* Add this to your main CSS file or in a <style> block in App.vue */
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+/* Base responsive container styles */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+/* Responsive breakpoints */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Hero section responsive styling */
+.hero-section {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1rem;
+  }
+}
+
+/* Cards responsive styling */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-4 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Fix for sidebar and main content */
+@media (max-width: 767px) {
+  .col-9.main-content,
+  .col-3.sidebar {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .sidebar {
+    margin-top: 2rem;
+  }
+}
+
+/* Navigation responsive fixes */
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .nav-item {
+    margin-right: 0.5rem;
+  }
+}
+
+/* App-wide responsive text adjustments */
+@media (max-width: 576px) {
   body {
-    display: flex;
-    place-items: center;
+    font-size: 0.9rem;
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
   }
 }
