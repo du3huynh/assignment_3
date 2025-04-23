@@ -1,4 +1,4 @@
-# assignment_3
+# healthy-bytes-fit5032
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -8,7 +8,7 @@ This template should help get you started developing with Vue 3 in Vite.
 
 ## Customize configuration
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
@@ -33,5 +33,3 @@ npm run build
 ```sh
 npm run lint
 ```
-# assignment_3
-# assignment_3

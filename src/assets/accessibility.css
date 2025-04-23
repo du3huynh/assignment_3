@@ -1,0 +1,280 @@
+/* Accessibility CSS with WCAG 2.1 AA compliance */
+
+/* Font size adjustments */
+.font-small {
+    --base-font-size: 0.875rem;
+  }
+  
+  .font-medium {
+    --base-font-size: 1rem;
+  }
+  
+  .font-large {
+    --base-font-size: 1.25rem;
+  }
+  
+  .font-x-large {
+    --base-font-size: 1.5rem;
+  }
+  
+  /* Apply font sizes to elements */
+  .font-small body {
+    font-size: var(--base-font-size);
+  }
+  
+  .font-medium body {
+    font-size: var(--base-font-size);
+  }
+  
+  .font-large body {
+    font-size: var(--base-font-size);
+  }
+  
+  .font-x-large body {
+    font-size: var(--base-font-size);
+  }
+  
+  .font-large h1, .font-x-large h1 {
+    font-size: calc(var(--base-font-size) * 2);
+  }
+  
+  .font-large h2, .font-x-large h2 {
+    font-size: calc(var(--base-font-size) * 1.75);
+  }
+  
+  .font-large h3, .font-x-large h3 {
+    font-size: calc(var(--base-font-size) * 1.5);
+  }
+  
+  .font-large p, .font-x-large p,
+  .font-large input, .font-x-large input,
+  .font-large button, .font-x-large button,
+  .font-large select, .font-x-large select,
+  .font-large textarea, .font-x-large textarea,
+  .font-large label, .font-x-large label,
+  .font-large a, .font-x-large a {
+    font-size: var(--base-font-size);
+  }
+  
+  /* Contrast adjustments */
+  .contrast-normal {
+    --text-color: #212529;
+    --background-color: #ffffff;
+    --link-color: #0d6efd;
+    --border-color: #dee2e6;
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+  }
+  
+  .contrast-high {
+    --text-color: #000000;
+    --background-color: #ffffff;
+    --link-color: #0000EE;
+    --border-color: #000000;
+    --primary-color: #0000EE;
+    --secondary-color: #333333;
+    --success-color: #008000;
+    --danger-color: #CC0000;
+    --warning-color: #FF8800;
+    --info-color: #0066CC;
+  }
+  
+  .contrast-inverted {
+    --text-color: #ffffff;
+    --background-color: #000000;
+    --link-color: #00AAFF;
+    --border-color: #ffffff;
+    --primary-color: #00AAFF;
+    --secondary-color: #cccccc;
+    --success-color: #00CC00;
+    --danger-color: #FF6666;
+    --warning-color: #FFCC00;
+    --info-color: #66CCFF;
+  }
+  
+  /* Apply contrast styles */
+  .contrast-high body,
+  .contrast-inverted body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  .contrast-high a,
+  .contrast-inverted a {
+    color: var(--link-color);
+  }
+  
+  .contrast-high .bg-primary,
+  .contrast-inverted .bg-primary {
+    background-color: var(--primary-color) !important;
+  }
+  
+  .contrast-high .text-muted,
+  .contrast-inverted .text-muted {
+    color: var(--text-color) !important;
+    opacity: 0.8;
+  }
+  
+  .contrast-high .card,
+  .contrast-inverted .card {
+    background-color: var(--background-color);
+    border-color: var(--border-color);
+  }
+  
+  .contrast-high .btn-primary,
+  .contrast-inverted .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--background-color);
+  }
+  
+  .contrast-high .btn-secondary,
+  .contrast-inverted .btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--background-color);
+  }
+  
+  .contrast-high .btn-success,
+  .contrast-inverted .btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: var(--background-color);
+  }
+  
+  .contrast-high .btn-danger,
+  .contrast-inverted .btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: var(--background-color);
+  }
+  
+  .contrast-high .btn-outline-primary,
+  .contrast-inverted .btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+  
+  .contrast-high .btn-outline-primary:hover,
+  .contrast-inverted .btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+  }
+  
+  /* Motion and animation control */
+  .reduce-motion * {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  /* Focus highlighting */
+  :focus {
+    outline: 3px solid #4285F4;
+    outline-offset: 2px;
+  }
+  
+  .no-focus-outline :focus:not(:focus-visible) {
+    outline: none;
+  }
+  
+  /* Better keyboard navigation */
+  a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.5);
+  }
+  
+  /* Skip navigation link for keyboard users */
+  .skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 9999;
+    transition: top 0.3s;
+  }
+  
+  .skip-to-content:focus {
+    top: 0;
+  }
+  
+  /* Aria-expanded elements */
+  [aria-expanded="true"] .collapse-indicator::before {
+    content: "▼";
+  }
+  
+  [aria-expanded="false"] .collapse-indicator::before {
+    content: "►";
+  }
+  
+  /* Form inputs with better accessibility */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="date"],
+  input[type="time"],
+  select,
+  textarea {
+    padding: 8px 12px;
+    font-size: var(--base-font-size);
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+  }
+  
+  .contrast-high input,
+  .contrast-high select,
+  .contrast-high textarea,
+  .contrast-inverted input,
+  .contrast-inverted select,
+  .contrast-inverted textarea {
+    border-color: var(--border-color);
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  /* Error states that don't rely solely on color */
+  .is-invalid {
+    border-color: var(--danger-color) !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23dc3545' viewBox='0 0 16 16'%3E%3Cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 40px;
+  }
+  
+  /* Improved table accessibility */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th {
+    text-align: left;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .contrast-high th,
+  .contrast-inverted th {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+  }
+  
+  td, th {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+  }
+  
+  /* Table with alternating row colors */
+  tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .contrast-high tbody tr:nth-child(odd),
+  .contrast-inverted tbody tr:nth-child(odd) {
+    background-color: rgba(128, 128, 128, 0.2);
+  }
