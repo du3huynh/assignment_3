@@ -1,0 +1,5 @@
+name = "my-health-companion"
+compatibility_date = "2025-04-24"
+
+[site]
+bucket = "./dist"
